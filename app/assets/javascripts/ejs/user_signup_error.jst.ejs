@@ -1,0 +1,13 @@
+<div id="error_explanation">
+	<ul>
+	  <% if (typeof error  != 'undefined' ) { %>
+	    <% Object.keys(error).forEach(function(prop) { %>
+          <li><%- prop %> <%- error[prop] %></li>
+      <% }); %>
+    <% } %>
+    
+    <% if(typeof error_msg  != 'undefined' ) { %>
+    	<li><%- error_msg %></li>
+    <% } %>
+	</ul>
+</div>
